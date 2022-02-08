@@ -1,0 +1,387 @@
+*{
+    text-decoration: none;
+    font-family: 'Poppins';
+    margin: 0px;
+    padding:0px;
+}
+
+::-webkit-scrollbar{
+    background-color: rgb(48, 9, 9);
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #fca017;
+    border-radius: 2px;
+}
+
+#navitem_search_container{
+    color: black;
+}
+
+#thispage_maincontent_div{
+    height: 90.1%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background-color: rgb(48, 9, 9);
+}
+
+#playlist_background *{
+    color: black;
+}
+
+#playlist_background{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.349);
+}
+
+#playlist_dialog_title_close{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    text-align: center;
+}
+
+#playlist_dialog_title_close p{
+    flex: 1.5;
+    align-self: center;
+}
+
+#create_playlist_form{
+    display: none;
+    flex-direction: column;
+}
+
+#add_playlist_foldername{
+    margin-top: 20px;
+    padding: 5px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.397);
+    border-radius: 5px;
+}
+
+#abt_playlist_nouser_txt{
+    display: none;
+    color: white;
+}
+
+#abt_playlist_nouser_txt a{
+    text-decoration: underline;
+    color: #FFA826;
+}
+
+#foldername_submit{
+    margin-top: 10px;
+    background-color: #FFA826;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    padding: 5px 0px;
+    box-shadow: 1px 2px 2px 2px 2px rgba(0, 0, 0, 0.274);
+}
+
+#thispage_playlist_dialog_box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    box-shadow: 5px 5px 15px 15px rgba(0, 0, 0, 0.185);
+    padding: 20px;
+}
+
+#playlist_optns{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 5px;
+}
+
+#playlist_dialog_close_btn{
+    color: red;
+    font-size: 30px;
+    text-align: end;
+    flex: 0.5;
+}
+
+#playlist_dialog_close_btn:hover{
+    cursor: pointer;
+}
+
+#create_playlist_folder_btn{
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+
+#create_playlist_folder_btn:hover{
+    cursor: pointer;
+    background-color: #e4e4e4;
+    box-shadow: 1px 2px 2px 2px rgba(0, 0, 0, 0.171);
+    transition: 0.3s ease-in-out;
+}
+
+#playlist_optns label{
+    margin-left: 20px;
+}
+
+#music_player_bar_div{
+    display: block;
+}
+
+html{
+    overflow: hidden;
+}
+
+#category_navbar{
+    background-color: rgb(48, 9, 9);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#thispage_music_title_list_div{
+    margin: 50px;
+}
+
+#thispage_intro_div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+
+#thispage_intro_div img{
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.349);
+    border: 1px solid rgba(245, 222, 179, 0.322);
+}
+
+
+#intro_title_div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-right: 100px;
+}
+
+#intro_title_div p{
+    font-size: 50px;
+    font-weight: bold;
+}
+
+#intro_title_div small{
+    margin-top: 20px;
+}
+
+#title_list_divider{
+    height: 1px;
+    border: 1px solid rgba(255, 255, 255, 0.274);
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#thispage_musics_div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+#listitems_div{
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+
+#cat_song_count{
+    align-self: center;
+}
+
+#list_item_main_container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+#list_each_song_div{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    flex: 5;
+}
+
+#list_item_main_container:hover{
+    background-color: #ffffff21;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#list_psong_delete_div{
+    flex: 0.5;
+    align-self: center;
+    display: none;
+}
+
+#cat_song_image{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    background-color: black;
+    object-fit: cover;
+    margin-left: 10px;
+    border: 1px solid rgba(138, 122, 122, 0.13);
+    box-shadow: 0px 0px 4px 4px rgba(0, 0, 0, 0.349);
+    background-blend-mode: soft-light;
+}
+
+#list_item_main_container:hover #cat_song_image{
+    transform: scale(1.07);
+    transition: 0.2s ease-in-out;
+}
+
+#cat_song_details{
+    align-self: center;
+    margin-left: 20px;
+}
+
+#cat_song_langtime{
+    margin-top: 10px;
+    font-size: small;
+}
+
+#cat_song_songname{
+    font-weight: bold;
+}
+
+.fa-heart:hover{
+    color: #aaaaaa;
+}
+
+#listitems_div hr{
+    height: 1px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.247);
+}
+
+#list_songs_about{
+    flex: 1;
+    padding-left: 20px;
+    text-align: center;
+}
+
+#abt_song_details{
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+#abt_song_img{
+    width: 250px;
+    height: 250px;
+    object-fit: contain;
+    border: 2px solid rgba(255, 255, 255, 0.363);
+    border-radius: 10px;
+    margin-top: 50px;
+    align-self: center;
+}
+
+.abt_songeachdata_class{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.abt_songeachdata_class *{
+    margin-top: 20px;
+}
+
+.abt_plist_songdelete_btn{
+    font-size: 30px;
+    align-self: center;
+}
+
+.abt_plist_songdelete_btn:hover{
+    cursor: pointer;
+    color: #FFA826;
+    transform: scale(1.3);
+    transition: 0.3s ease-in-out;
+}
+
+#abt_plistadd_login_div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#abt_toggle_player_btn{
+    margin-top: 30px;
+}
+
+#abt_playlists_btn, #abt_toggle_player_btn{
+    color: white;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: #FFA826;
+    font-weight: bold;
+    border: 2px solid #b16a00;
+}
+
+#abt_playlists_btn:hover, #abt_toggle_player_btn:hover{
+    cursor: pointer;
+    background-color: #da8403;
+    transition: 0.3s ease-in-out;
+}
+
+#abt_songadded_div{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#abt_songchange_playlist_btn{
+    text-decoration: underline;
+    color: white;
+    margin-left: 15px;
+}
+
+#abt_songchange_playlist_btn:hover{
+    color: #FFA826;
+    cursor: pointer;  
+    transition: 0.2s ease-in-out;
+}
+
+.playlist_added_icon{
+    color: rgb(0, 196, 0);
+}
+
+#thispage_main_container{
+    display: flex;
+    flex-direction: row;
+}
+
+#list_options_left_side{
+    flex: 1;
+    background-color: #FFA826;
+}
+
+#list_musics_right_side{
+    flex: 4;
+    background-color: rgb(48, 9, 9);
+}
+
